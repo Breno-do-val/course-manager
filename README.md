@@ -6,7 +6,7 @@ Single page application for courses management
   - [Table of Content](#table-of-content)
     - [Screnshoots](#screnshoots)
     - [General info](#general-info)
-    - [and dependencies](#and-dependencies)
+    - [Technologies and dependencies](#technologies-and-dependencies)
     - [Setup](#setup)
     - [Author](#author)
     - [License and copyright](#license-and-copyright)
@@ -19,7 +19,7 @@ Single page application for courses management
 ### General info
 ...
 
-###  and dependencies
+### Technologies and dependencies
 * Boostrap - 
 
 ### Setup
