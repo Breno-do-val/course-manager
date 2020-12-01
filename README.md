@@ -1,35 +1,48 @@
 # CourseManager
+Single page application for courses management
 
+## Table of Content
+- [CourseManager](#coursemanager)
+  - [Table of Content](#table-of-content)
+    - [Screnshoots](#screnshoots)
+    - [General info](#general-info)
+    - [and dependencies](#and-dependencies)
+    - [Setup](#setup)
+    - [Author](#author)
+    - [License and copyright](#license-and-copyright)
+    - [Acknowledgments](#acknowledgments)
+    - [Notes](#notes)
+
+### Screnshoots
+![]( ...)
+
+### General info
+...
+
+###  and dependencies
+* Boostrap - 
+
+### Setup
+**_For development_**
+Run `ng serve` for a dev server.\
+Navigate to `http://localhost:4200/`. \
+The app will automatically reload if you change any of the source files.
+
+**_For deployment_**
+- The application has not been deployed yet.
+
+### Author
+Breno Ribeiro do Val - Following the instructions provided.
+
+### License and copyright
+MIT.
+
+### Acknowledgments
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.2.
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-
-
 ### Notes
--> One way data binding;
+-> One way data binding;\
 ` { ngModel } = 'name'; `
 
--> Two way data binding;
+-> Two way data binding;\
 ` {( ngModel )} = 'name' `
