@@ -8,6 +8,7 @@
   </div>
 </div>
 
+
 <table class="table table-striped">
   <thead>
     <tr>
@@ -29,6 +30,8 @@
       <td>
         <app-star [rating]='course.rating'></app-star>
       </td>
-      <td></td>
+      <td>
+        <a [routerLink]="['/courses/info', course.id]" class="btn btn-primary">Edit</a>
+      </td>
   </tbody>
 </table>
