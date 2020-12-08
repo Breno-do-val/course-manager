@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Subscriber } from 'rxjs';
 import { Course } from '../course.model/course.model';
 import { CourseService } from '../course.service';
 
@@ -9,16 +10,22 @@ import { CourseService } from '../course.service';
 })
 export class CourseListComponent implements OnInit {
 
+  filteredCourses: Course[] = [];
+
   _courses: Course[] = [];
   _filteredBy: string = '';
-
-  filteredCourses: Course[] = [];
 
   constructor(private courseService: CourseService) { }
 
   ngOnInit(): void {
-    this._courses = this.courseService.retrieveAll();
-    this.filteredCourses = this._courses;
+    this.retrieveAll();
+  }
+
+  retrieveAll(): void {
+    this.courseService.retrieveAll().subscribe(courses => {
+      this._courses = courses;
+      this.filteredCourses = this._courses;
+    });
   }
 
   set filter(value: string) {

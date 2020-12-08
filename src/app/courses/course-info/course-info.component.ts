@@ -10,7 +10,17 @@ import { CourseService } from '../course.service';
 })
 export class CourseInfoComponent implements OnInit {
 
-  course?: Course;
+  course: Course = {
+    id: 0,
+    name: '',
+    imageUrl: '',
+    price: 0,
+    code: '',
+    duration: 0,
+    rating: 0,
+    releaseDate: '',
+    description: ''
+  };
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -18,13 +28,15 @@ export class CourseInfoComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.course = this.courseService.retrieveById(Number(this.activatedRoute.snapshot.paramMap.get('id')));
+    this.courseService.retrieveById(Number(this.activatedRoute.snapshot.paramMap.get('id'))).subscribe(course => {
+      this.course = course;
+    });
   }
 
   save(): void {
-    if (this.course) {
-      this.courseService.save(this.course);
-    }
+    this.courseService.save(this.course).subscribe(course => {
+      console.log(`Course ${this.course} saved!`);
+    })
   }
 
 }
