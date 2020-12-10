@@ -10,7 +10,17 @@ import { CourseService } from '../course.service';
 })
 export class CourseListComponent implements OnInit {
 
-  filteredCourses: Course[] = [];
+  filteredCourses: Course[] = [{
+    id: 0,
+    name: '',
+    imageUrl: '',
+    price: 0,
+    code: '',
+    duration: 0,
+    rating: 0,
+    releaseDate: '',
+    description: ''
+  }];
 
   _courses: Course[] = [];
   _filteredBy: string = '';
