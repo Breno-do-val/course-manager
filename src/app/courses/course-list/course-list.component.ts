@@ -10,7 +10,17 @@ import { CourseService } from '../course.service';
 })
 export class CourseListComponent implements OnInit {
 
-  filteredCourses: Course[] = [];
+  filteredCourses: Course[] = [{
+    id: 0,
+    name: '',
+    imageUrl: '',
+    price: 0,
+    code: '',
+    duration: 0,
+    rating: 0,
+    releaseDate: '',
+    description: ''
+  }];
 
   _courses: Course[] = [];
   _filteredBy: string = '';
@@ -26,6 +36,13 @@ export class CourseListComponent implements OnInit {
       this._courses = courses;
       this.filteredCourses = this._courses;
     });
+  }
+
+  deleteById(courseId: number): void {
+    this.courseService.deleteById(courseId).subscribe(_ => {
+      console.log('Deleted succesfully');
+      this.retrieveAll();
+    })
   }
 
   set filter(value: string) {
